@@ -14,8 +14,8 @@ services:
     ports:
       - "5440:5432"
     environment:
-      - POSTGRES_USER = ${ANALYTICS_POSTGRES_USER}
-      - POSTGRES_PASSWORD = ${ANALYTICS_POSTGRES_PASSWORD}
+      - POSTGRES_USER=${ANALYTICS_POSTGRES_USER}
+      - POSTGRES_PASSWORD=${ANALYTICS_POSTGRES_PASSWORD}
 
   ewm-service:
     build: afisha-app
@@ -32,5 +32,5 @@ services:
     ports:
       - "5441:5432"
     environment:
-      - POSTGRES_USER = ${AFISHA_POSTGRES_USER}
-      - POSTGRES_PASSWORD = ${AFISHA_POSTGRES_PASSWORD}
+      - POSTGRES_USER=${AFISHA_POSTGRES_USER}
+      - POSTGRES_PASSWORD=${AFISHA_POSTGRES_PASSWORD}
