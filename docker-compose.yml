@@ -42,3 +42,4 @@ services:
     environment:
       - POSTGRES_USER=${AFISHA_POSTGRES_USER}
       - POSTGRES_PASSWORD=${AFISHA_POSTGRES_PASSWORD}
+

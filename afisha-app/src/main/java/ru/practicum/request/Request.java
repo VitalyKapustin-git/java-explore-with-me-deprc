@@ -1,16 +1,33 @@
 package ru.practicum.request;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import ru.practicum.event.Event;
+import ru.practicum.user.User;
+
+import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
 @Table(name = "participations")
 public class Request {
 
     @Id
-    long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
 
-    String name;
+    @ManyToOne
+    private User requestor;
+
+    @ManyToOne
+    private Event event;
+
+    String status;
+
+    LocalDateTime created;
 
 }
